@@ -1,0 +1,47 @@
+@import "./Variables.css";
+@import "./fonts/source-sans-pro/SourceSansPro.css";
+
+/* stylelint-disable selector-max-type, selector-max-universal */
+
+/*
+  apply a natural box layout model to all elements, but allowing
+  components to change
+*/
+
+html {
+  font-family: Source Sans Pro, sans-serif;
+}
+
+body {
+  background: $gray-light;
+}
+
+.root {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    background: rgba($gray-dark, 0.5);
+    transition: opacity ease-out 200ms, transform linear 0ms 200ms;
+    will-change: transform, opacity;
+  }
+}
+
+.alive {
+  &::after {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.content {
+  min-height: 20rem;
+
+  background: $gray-light;
+}

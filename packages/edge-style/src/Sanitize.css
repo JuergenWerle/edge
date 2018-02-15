@@ -1,0 +1,115 @@
+/* stylelint-disable selector-max-universal, selector-max-type */
+
+/**
+ * Add text decoration inheritance in all browsers.
+ * Add vertical alignment inheritence in all browsers.
+ */
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+/**
+ * Set `background-repeat: no-repeat` to all elements and pseudo elements.
+ */
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+}
+
+/**
+ * Remove the list style on navigation lists in all browsers.
+ */
+
+nav ol,
+nav ul {
+  list-style: none;
+}
+
+/**
+ * Change the alignment on media elements in all browers.
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/**
+	* Change the fill color to match the text color in all browsers.
+	*/
+
+svg {
+  fill: currentColor;
+}
+
+/**
+ * Inherit color and font styling in all browsers.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+}
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+
+optgroup {
+  /* bold == 700 */
+  font-weight: 700;
+}
+
+/**
+ * Change the resize direction on textareas in all browsers.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/*
+ * Remove the tapping delay on clickable elements.
+ */
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  touch-action: manipulation;
+}
+
+/**
+ * 1. Inherit style issues with custom selections, per
+ *    robsterlini.co.uk/journal/opentype-and-selection-dont-mix
+ * 2. Turn on kerning, standard ligatures, and proportional, oldstyle numerals
+ *    Turn off all other ligatures, tabular, lining numerals, and alternates
+ *    Uses same settings for tables
+ * 3. Hard-codes fallback text selection for issue #18, color is Chrome’s
+ *    per via http://stackoverflow.com/a/16094931/864799
+ */
+
+::selection {
+  background-color: #accef7; /* 3. */
+  color: inherit; /* 1. */
+  text-shadow: inherit; /* 2. */
+}

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calc Complex 1`] = `
+"h1{
+width:calc(29.9997% - 22px)
+}"
+`;
+
+exports[`Calc Simple 1`] = `
+"h1{
+width:13%
+}"
+`;
+
+exports[`Nested Basic 1`] = `
+"body h1{
+font-weight:700
+}
+
+body h2{
+font-weight:400
+}"
+`;
+
+exports[`Nested Parent Selector 1`] = `
+"body ul li:first-child{
+margin-top:0
+}"
+`;
+
+exports[`Sassy Mixins 1`] = `
+"h1{
+color:#ff4136
+}"
+`;
+
+exports[`Sassy Variables 1`] = `
+"h1{
+background:#ff4136
+}"
+`;

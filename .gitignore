@@ -1,0 +1,13 @@
+node_modules/
+coverage/
+
+*debug.log
+*error.log 
+.cache
+
+packages/*/lib
+packages/*/build
+packages/*/bin
+packages/*/docs
+
+*.log

@@ -1,0 +1,24 @@
+{
+  "name": "edge-jest",
+  "version": "0.1.2",
+  "description": "Centralized Jest configuration for Edge-based projects.",
+  "main": "jest.config.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "files": [
+    "jest.*"
+  ],
+  "author": {
+    "name": "Sebastian Software",
+    "email": "s.werner@sebastian-software.de",
+    "url": "https://www.sebastian-software.de"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.2.2",
+    "jest-fetch-mock": "^1.4.1",
+    "raf": "^3.4.0"
+  }
+}

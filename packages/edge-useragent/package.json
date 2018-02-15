@@ -1,0 +1,64 @@
+{
+  "name": "edge-useragent",
+  "version": "3.0.12",
+  "description": "High performance user agent string parser for modern environments. Part of the Edge Platform.",
+  "main": "lib/index.es5.cjs.js",
+  "module": "lib/index.es5.esm.js",
+  "main:es2015": "lib/index.es2015.cjs.js",
+  "module:es2015": "lib/index.es2015.esm.js",
+  "keywords": [
+    "agent",
+    "browser",
+    "browserscope",
+    "os",
+    "parse",
+    "parser",
+    "ua",
+    "ua-parse",
+    "ua-parser",
+    "user agent",
+    "user",
+    "user-agent",
+    "useragent",
+    "version"
+  ],
+  "engines": {
+    "node": ">=6.0.0",
+    "yarn": ">=1.0.0",
+    "npm": ">=4.0.0"
+  },
+  "files": [
+    "bin/",
+    "docs/",
+    "lib/"
+  ],
+  "author": {
+    "name": "Sebastian Software",
+    "email": "s.werner@sebastian-software.de",
+    "url": "https://www.sebastian-software.de"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "lru-cache": "4.1.x",
+    "tmp": "0.0.x"
+  },
+  "devDependencies": {
+    "babel-preset-edge": "*",
+    "eslint": "*",
+    "mocha": "*",
+    "prepublish": "*",
+    "request": "2.83.x",
+    "rimraf": "*",
+    "semver": "5.5.x",
+    "should": "*",
+    "yamlparser": "0.0.x"
+  },
+  "scripts": {
+    "lint": "eslint src/",
+    "test": "mocha test/*.test.js",
+    "qa": "mocha --ui exports test/*.qa.js",
+    "update": "babel-node ./bin/update.js && babel-node ./bin/testfiles.js",
+    "build": "rimraf lib && prepublish",
+    "prepack": "npm run build"
+  }
+}

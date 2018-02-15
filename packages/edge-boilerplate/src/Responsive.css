@@ -1,0 +1,37 @@
+/* stylelint-disable selector-max-type, property-no-unknown */
+
+@mixin mobile {
+  @media screen and (width >= 20em) and (width < 30em) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (width >= 48em) {
+    @content;
+  }
+}
+
+/*
+Adaptive Sizing for Mobile
+See also: https://github.com/seaneking/postcss-responsive-type
+*/
+@include mobile {
+  html {
+    /* min-size, max-size */
+    font-size: responsive 16px 18px;
+
+    /* viewport widths between which font-size is fluid */
+    font-range: 320px 400px;
+  }
+}
+
+@include desktop {
+  html {
+    /* min-size, max-size */
+    font-size: responsive 16px 18px;
+
+    /* viewport widths between which font-size is fluid */
+    font-range: 1280px 1600px;
+  }
+}

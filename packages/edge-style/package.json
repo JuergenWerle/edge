@@ -1,0 +1,43 @@
+{
+  "name": "edge-style",
+  "version": "0.2.14",
+  "description": "Styling Essentials for Edge. Part of the Edge Platform.",
+  "main": "lib/index.js",
+  "browser": "lib/index.js",
+  "scripts": {
+    "test": "echo",
+    "build": "rimraf lib && prepublish",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=6.0.0",
+    "yarn": ">=1.0.0",
+    "npm": ">=4.0.0"
+  },
+  "keywords": [
+    "css",
+    "normalize",
+    "sanitize",
+    "reset",
+    "opentype",
+    "cssreset"
+  ],
+  "author": {
+    "name": "Sebastian Software",
+    "email": "s.werner@sebastian-software.de",
+    "url": "https://www.sebastian-software.de"
+  },
+  "files": [
+    "bin/",
+    "docs/",
+    "lib/"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "edge-postcss": "^0.10.0"
+  },
+  "devDependencies": {
+    "prepublish": "*",
+    "rimraf": "*"
+  }
+}
