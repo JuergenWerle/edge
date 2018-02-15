@@ -4,9 +4,12 @@ import reactTreeWalker from "react-tree-walker"
 /* eslint-disable max-params */
 export default function deepFetch(rootElement) {
   function visitor(element, instance, context) {
+    console.log(instance.fetchData.toString())
+    /*
     if (instance && typeof instance.fetchData === "function") {
       return instance.fetchData()
     }
+    */
 
     return true
   }
